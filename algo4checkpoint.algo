@@ -1,0 +1,18 @@
+ 
+ALGORITHM insertion_Sort
+VAR
+   arr : ARRAY_OF INTEGER[50];
+   i , j , element : INTEGER ;
+BEGIN
+    write("give an array") ;
+    read(arr);
+    FOR i FROM 1 TO arr.length DO
+        element := arr[i];  
+        j := i - 1;
+        WHILE (j >= 0 ) and (arr[j] > element) DO
+            arr[j + 1] := arr[j];  
+            j := j - 1;  
+        END_WHILE
+        arr[j + 1] := element ;  
+    END_FOR
+END
